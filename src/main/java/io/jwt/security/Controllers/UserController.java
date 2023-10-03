@@ -16,6 +16,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @PutMapping("update/{studentId}")
     public ResponseEntity<?> updateStudent(@PathVariable int studentId, @RequestBody UserDtoWithoutRole userDto){
         UserDto theUserDto = userService.updateUser(studentId, userDto);
